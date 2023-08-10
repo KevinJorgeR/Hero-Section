@@ -1,0 +1,407 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.text-a{
+    font-family: Arial, sans-serif;
+    margin-right: 0px;
+     padding: 0; /* Elimina cualquier padding */
+    line-height: 1; /* Ajusta el line-height para eliminar cualquier espacio adicional */
+}
+
+.selected{
+    font-family: Arial, sans-serif;
+}
+
+.container-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.container-button button.text-a {
+    padding-left: 0.2px; /* Ajusta este valor según sea necesario */
+}
+.container-button button {
+    margin: 5px;
+    padding: 8px 17px;
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.container-button button.selected {
+    background-color: #1a5bf4;
+    color: white;
+}
+
+.container-button img {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+}
+
+.texto-principal { /*  texto principal  */
+    font-family: Arial, sans-serif;
+        font-size: 60px;
+        font-weight: bold;
+        color: #000000;
+        line-height: 0;
+}
+
+.texto-secundario { /*  texto secundario  */
+    font-family: Arial, sans-serif;
+        font-size: 22px;
+        color: #7a7a7a;
+        line-height: 1.4;
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 9px; /* Reducir margen inferior */
+}
+
+.button-container {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los botones */
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #1a5bf4;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    margin-right: 10px; 
+    outline: none; 
+}
+
+.button:focus {
+    outline: 4px solid #99cbf7; /* Borde sólido en foco */
+}
+
+.button:hover {
+    background-color: #0344b5; /* Color más oscuro en hover */
+}
+
+.button2 {
+    padding: 10px 20px;
+    border: none;
+    height: 48px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    border: 0.7px solid rgb(204, 203, 203);
+    align-items: center;
+}
+.dark-mode .button2 {
+    background-color: var(--fondo-color-oscuro); /* Establece el fondo oscuro */
+    color: var(--texto-color-oscuro); /* Establece el color de texto oscuro */
+    border: 1px solid #334154; 
+}
+
+.dark-mode a:hover{
+    background-color: #334154;
+}
+
+.dark-mode .button2:hover {
+    background-color: #334154; /* Color más oscuro en hover */
+}
+
+.fa-video {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.material-symbols-outlined {
+    font-size: 18px;
+    margin-left: 10px;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+    
+}
+
+.center-span {
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 100px; /* Ajusta este valor para controlar el espaciado */
+}
+
+.image-container img { /* Altura y ancho de img yt y reddit */
+    width: 190px;
+    height: 80px; 
+}
+
+.image-container .image-box:nth-child(2) img {
+    width: 250px; /* Aplica el ancho del 50% solo a la img hunt */
+}
+
+.image-container .image-box {
+    flex: 1;
+    padding: 0 25px; /* Ajusta este valor para controlar el espaciado */
+}
+.image-box {
+    transition: filter 0.07s ease; /* Aplicar transición suave a los efectos */
+}
+
+.image-box:hover {
+    filter: brightness(0.4);  /*Ajusta el brillo o lo oscurece */
+}
+
+.thicker-icon {
+    text-shadow: 0 0 3px #000;  /*Simular grosor con sombra */
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 0,2px;
+    background-color: #ebe9e9; /* Color de fondo plomo */
+    border-radius: 20px; /* Borde redondeado */
+    text-decoration: none;
+}
+
+:root {
+    --texto-color-original: #111827;
+    --fondo-color-original: #ffffff;
+    --texto-color-oscuro: #ffffff;
+    --fondo-color-oscuro: #111827;
+}
+
+.dark-mode {
+    color: var(--texto-color-oscuro);
+    background-color: var(--fondo-color-oscuro);
+}
+
+.light-element {
+    color: var(--texto-color-oscuro);
+    background-color: var(--fondo-color-original);
+}
+
+.dark-element {
+    color: var(--texto-color-original);
+    background-color: var(--fondo-color-original);
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.dark-mode a button.selected,
+.dark-mode a button.text-a{
+    color: var(--texto-color-oscuro);
+}
+
+.dark-mode a {
+    background-color: #1f2937;
+}
+
+.dark-mode .icon-chevron {
+    color: #ffffff; /* Cambia el color a blanco en modo oscuro */
+}
+
+.dark-mode .texto-secundario{
+    color: #9ca3af;
+}
+
+.dark-mode .image-box:hover {
+    filter: brightness(1.6)  /* Ajusta el valor según desees */
+}
+
+.dark-mode .button:focus {
+    outline: 4px solid #233876; /* Cambiar el color del borde en modo oscuro */
+}
+
+.styled-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    transition: background-color 0.3s;
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 564px) {
+    .container-button {
+        text-align: center;
+        margin-top: -50px;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .container-button a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52%;
+    }
+    
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .styled-button {
+        padding: 5px 10px;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid #000000;
+        transition: background-color 0.3s;
+    }
+    
+    #dark-mode-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .text-container {
+        margin: 0 auto;
+        max-width: 80%;
+        
+    }
+
+    .texto-principal {
+        font-size: 29px;
+        margin-bottom: 25px;
+        text-align: center;
+        white-space: nowrap;
+        margin-top: 40px;
+        
+        
+    }
+
+    .texto-secundario {
+        font-size: 16px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .center-container {
+        text-align: center;
+    }
+    
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .image-box {
+        margin: -10px;
+    }
+
+    .image-box.yt {
+        margin-left: 70px; /* Ajusta este valor según lo que necesites */
+    }
+    
+    .image-box.red {
+        margin-left: 55px; /* Ajusta este valor según lo que necesites */
+    }
+
+    .image-box.hu {
+        margin-left: 35px; /* Ajusta este valor según lo que necesites */
+    }
+
+    .center-span {
+        margin-top: -24px;
+    }
+
+    .button {
+        margin: 5px auto;
+        padding: 10px 130px;
+        height: 48px;
+    }
+
+    .button2{
+        margin: 5px auto;
+        padding: 10px 130px;
+        height: 48px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
